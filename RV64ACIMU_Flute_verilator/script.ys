@@ -1,0 +1,4 @@
+read_verilog -defer ./Verilog_RTL/*.v <- this reads ALL verilog in the directory 
+hierarchy -check -top 
+prep -top
+write_smt2 -wires mkCPU.smt2

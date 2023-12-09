@@ -1,0 +1,7 @@
+[x] get smt definitions from yosys for flute cpu 
+[x ] get smt definitions from yosys for risc v scalar crypto aes 
+[x] compile different verify pins from fiscc 
+[x] find c examples of the scalar crypto aes 
+[ ] create constraints files 
+[ ] get proper elf files 
+[ ] prove something 

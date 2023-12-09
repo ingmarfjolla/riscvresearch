@@ -1,0 +1,120 @@
+
+            FISSC: Fault Injection and Simulation Secure Collection
+	    	     	   Version 2.2
+			   Last update December 28, 2020
+
+            https://lazart.gricad-pages.univ-grenoble-alpes.fr/fissc/
+
+
+################################################################################
+                              What is FISSC
+################################################################################
+
+
+FISSC is a dataset for the evaluation and comparison of security analysis
+tools. It provides a range of relevant embedded secure source codes, which have
+been normalized and secured agains fault injection. It also provides the
+expected results of security analysis performed by some academic and industrial 
+tools. FISSC allows one to evaluate its own security framework and compare its
+analysis results against others, leading to the improvement of said tools.
+
+The first version (FISSC-1.1) has been developped during the project SERTIF, that is 
+supported by ANR-DGA ASTRID 2014 (project ANR-14-ASTR-0003-01).
+
+If you are using it, Please cite FISSC :
+
+L. Dureuil, G. Petiot, M.-L. Potet, T.-H. Le, A. Crohen, Ph. de Choudens.
+FISSC: a Fault Injection and Simulation Secure Collection.
+In International Conference on Computer Safety, Reliability and Security (SAFECOMP), 2016.
+
+
+################################################################################
+                               Contents
+################################################################################
+
+FISSC-2.2 contains:
+
+1 - the VerifyPIN suit embedding several verifypin version with counter-measures.
+
+The file Results contains le number of attacks for a test inversion fault model and multi-faults
+injection (from 1 to 4) for two successfull oracles.
+
+Results has been obtained with the help of our Lazart tool:
+https://lazart.gricad-pages.univ-grenoble-alpes.fr/home/
+
+- VerifyPIN_0
+- VerifyPIN_1 with hardened bools
+- VerifyPIN_2 with hardened bools and fixed-time loop
+- VerifyPIN_3 with hardened bools, fixed-time loop and inlined function
+- VerifyPIN_4 with hardened bools, and fixed-time loop, inlined function,
+                 PTC decremented first, PTC backup and loop counter
+- VerifyPIN_5 with hardened bools, fixed-time loop, PTC decremented first
+                 and double call
+- VerifyPIN_6 with hardened bools, fixed-time loop, inlined call, PTC decremented
+                 first and double test
+- VerifyPIN_7 with hardened bools, fixed-time loop, inlined call, PTC decremented
+                 first, double test and step counter
+where we are looking for attacks:
+    * leading to a successful authentication with an erroneous PIN
+    * leading to a non-decrement of the try counter in case of a failed
+      authentication
+These examples is presented in Articles/ICST14.pdf
+
+2 - 3 versions of CRT-RSA
+- Basic
+- CRT_RSA with SHAMIR counter-measure
+- CRT_RSA with AUMULLER counter-measure
+
+where we are looking for attacks targeting the signature computation (see 
+the Results file).
+This example is presented in Articles/QASA14.pdf
+
+3 - 2 versions of GetChallenge
+- GetChallenge_0 
+- GetChallenge_1 with hardened bools, virtual stack, double arguments,
+  	       step counter and loop counter
+where we are looking for attacks preventing the random buffer generation
+
+
+- aes_addRoundKey_cpy
+  where we are looking for attacks assigning a known value to the key in order
+  to make the encryption algorithm deterministic
+
+################################################################################
+                                License
+################################################################################
+
+You can redistribute FISSC and/or modify it under the terms of the GNU
+Lesser General Public License as published by the Free Software
+Foundation, version 3.0.
+
+It is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Lesser General Public License for more details.
+
+See the GNU Lesser General Public License version 3.0
+for more details (enclosed in the file LICENSE).
+
+
+################################################################################
+                                Authors
+################################################################################
+
+VERIMAG, Univ. Grenoble-Alpes
+- Marie-Laure POTET
+- Laurent MOUNIER
+
+CEA LETI
+- Louis DUREUIL
+- Philippe DE CHOUDENS
+
+MORPHO
+- Thanh-Ha LE
+
+
+################################################################################
+                                Contact
+################################################################################
+
+sertif-secure-collection@univ-grenoble-alpes.fr
