@@ -3,5 +3,5 @@
 [x] compile different verify pins from fiscc 
 [x] find c examples of the scalar crypto aes 
 [ ] create constraints files 
-[ ] get proper elf files 
+[ ] get proper smt definitions from elf files 
 [ ] prove something 
