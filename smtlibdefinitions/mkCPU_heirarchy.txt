@@ -1,0 +1,24 @@
+48.2. Analyzing design hierarchy..
+Top module:  \mkCPU
+Used module:     \mkCSR_RegFile
+Used module:         \mkCSR_MIE
+Used module:         \mkCSR_MIP
+Used module:         $paramod\FIFO20\guarded=32'00000000000000000000000000000001
+Used module:         \mkSoC_Map
+Used module:     $paramod$d2a19669f510861d34708bf17a5901dfc04c4d64\FIFO2
+Used module:     \mkGPR_RegFile
+Used module:         $paramod$b5544c400b1efb4c49519a243d47f57295f3f3e1\RegFile
+Used module:     \mkNear_Mem
+Used module:         $paramod\mkMMU_Cache\dmem_not_imem=1'1
+Used module:             $paramod$94f71f22b74b8fc4221d6e957603c5c46e645ff8\FIFO2
+Used module:             $paramod$cea53dfca34fc6dbd8dc994d81723d12c55d852a\FIFO2
+Used module:             $paramod$8341d6b4f34aa8a4b56e1e93356453b0ba2d0aea\FIFO2
+Used module:             $paramod$82a14087d6fd30f731b72021fcad6a10360634c9\FIFO2
+Used module:             $paramod$29440d2031a3d407fc6adcd7bf9d01e23550fe69\FIFO2
+Used module:             $paramod$38825a7c5bbde63f22bc7b3e7bd62451ed5c938a\BRAM2
+Used module:             $paramod$bb68dc4c55c4be30f786f5e65ac7aa7095d59d9d\BRAM2
+Used module:         $paramod\mkMMU_Cache\dmem_not_imem=1'0
+Used module:     \mkRISCV_MBox
+Used module:     \mkBranch_Predictor
+Used module:         $paramod$0aed58b8067cba5626b7c75ba0a3ec0c2d91283a\BRAM2
+Used module:         $paramod$3f6891fa2e9e1595567641c8574ad79d7c4109d3\RegFile
