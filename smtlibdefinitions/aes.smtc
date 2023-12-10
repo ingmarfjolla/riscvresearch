@@ -1,0 +1,4 @@
+state 22:25
+assume (= [var] col_out)
+assert ( (= (|var col_out|) ))
+(check-sat)
