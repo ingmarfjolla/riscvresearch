@@ -1,0 +1,10 @@
+; Declare any new sorts, variables, or functions
+(declare-const eighth_round Bool)
+(declare-const fault_byte (_ BitVec 8))
+
+; Assert the fault induction
+(assert 
+  (forall ((state |aes_mixcolumn_byte_enc_s|))
+    (=> eighth_round
+        (= (|modified_mixcolumn_byte| state) 
+           (xor (|aes_mixcolumn_byte_enc#11| state) fault_byte)))))
