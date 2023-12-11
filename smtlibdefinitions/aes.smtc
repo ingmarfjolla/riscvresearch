@@ -1,4 +1,2 @@
-state 22:25
-assume (= [var] col_out)
-assert ( (= (|var col_out|) ))
-(check-sat)
+initial
+assert (= [mix_enc_i0] [mix_enc_i0] )
